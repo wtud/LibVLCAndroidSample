@@ -9,6 +9,7 @@ import org.videolan.libvlc.MediaList;
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -86,9 +87,11 @@ public class MainActivity extends Activity {
                     mLibVLC.getMediaList().insert(0,
                             (String) mAdapter.getItem(position));
                     mLibVLC.playIndex(0);
-                } else
-                    Toast.makeText(MainActivity.this, "Video mode TODO",
-                            Toast.LENGTH_SHORT).show();
+                } else {
+                    Intent intent = new Intent(MainActivity.this, VideoActivity.class);
+                    intent.putExtra(VideoActivity.LOCATION, (String) mAdapter.getItem(position));
+                    startActivity(intent);
+                }
             }
         });
         RadioButton radioAudio = (RadioButton)findViewById(R.id.radioAudio);
