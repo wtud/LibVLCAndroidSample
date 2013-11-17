@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="action_settings">Settings</string>
+    <string name="app_name">LibVLC Android Sample</string>
+    <string name="audio">Audio</string>
+    <string name="hello_world">Welcome to the libVLC on Android sample!</string>
+    <string name="load_a_mp3">Minimal: Play /sdcard/a.mp3</string>
+    <string name="refresh">Refresh</string>
+    <string name="video">Video</string>
+
+</resources>
