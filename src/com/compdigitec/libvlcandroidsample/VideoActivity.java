@@ -161,7 +161,7 @@ public class VideoActivity extends Activity implements SurfaceHolder.Callback,
 
             // Create a new media player
             libvlc = LibVLC.getInstance();
-            libvlc.setIomx(false);
+            libvlc.setHardwareAcceleration(LibVLC.HW_ACCELERATION_DISABLED);
             libvlc.setSubtitlesEncoding("");
             libvlc.setAout(LibVLC.AOUT_OPENSLES);
             libvlc.setTimeStretching(true);
