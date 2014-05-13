@@ -26,9 +26,21 @@ public class MainActivity extends Activity {
     DirectoryAdapter mAdapter;
     LibVLC mLibVLC;
 
+	private final String BIG_H264_FILE_ON_HTTP = "http://archive.org/download/rmE163ArabicSubHdarabRunnersTeamBingutopHangukSib.mkv/rmE163ArabicSubHdarabRunnersTeamBingutopHangukSib.mp4";
+
+    
     View.OnClickListener mSimpleListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View arg0) {
+        
+    	@Override
+    	public void onClick(View arg0)
+    	{
+    		
+            Intent intent = new Intent(MainActivity.this, VideoActivity.class);
+            intent.putExtra(VideoActivity.LOCATION, BIG_H264_FILE_ON_HTTP);
+            startActivity(intent);
+    	}
+    	
+    	public void onClick_old(View arg0) {
             // Build the path to the media file
             String amp3 = Environment.getExternalStorageDirectory()
                     .getAbsolutePath() + "/a.mp3";
